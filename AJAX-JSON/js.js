@@ -21,7 +21,17 @@ btn.addEventListener('click', 	function(){
 })
 
 function renderHTML(data){
-	var string ="<tr><td>"+i+"</td><td>"+data[i%3].name+"</td><td>"+data[i%3].species+"</td><td>"+data[i%3].foods.likes+"</td><td>"+data[i%3].foods.dislikes+"</td></tr>";
-		
+	var string ="<tr><td>"+i+"</td><td>"+data[i%3].name+"</td><td>"+data[i%3].species+"</td><td>";
+	
+	for(j=0;j<data[i%3].foods.likes.length;j++)
+	{
+		string+=data[i%3].foods.likes[j]+" ";
+	}
+	string+="</td><td>";
+	for(j=0;j<data[i%3].foods.dislikes.length;j++)
+	{
+		string+=data[i%3].foods.dislikes[j]+" ";
+	}
+	string+="</td></tr>";
 	container.insertAdjacentHTML('beforeend', string);
 }
