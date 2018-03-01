@@ -35,6 +35,12 @@ td,th
 .id={
 	max-width: 10px;
 }
+#myInput{
+	display: none;
+	margin: auto;
+	margin-bottom: 12px;
+	padding: 12px ;
+}
 #tab{
 	background-color: #1d80e2;
 	max-width: 500px;
@@ -45,4 +51,5 @@ td,th
 }
 caption{
 	font-size: 30px;
+	margin-bottom: 12px;
 }
